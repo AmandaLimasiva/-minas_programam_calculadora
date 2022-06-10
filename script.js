@@ -8,7 +8,7 @@ const req6 = document.querySelector(' #requisito6 '); //NÃO ALTERAR!
 const req7 = document.querySelector(' #requisito7 '); //NÃO ALTERAR!
 
 
-let historicoDeResultado = [];//NÃO ALTERAR!
+let historicoDeResultado = [];//NÃO ALTERAR! variável do array histórico
 let requisito1 = 0;//NÃO ALTERAR!
 let requisito2 = [];//NÃO ALTERAR!
 let requisito3 = [];//NÃO ALTERAR!
@@ -22,9 +22,8 @@ let requisito7 = [];//NÃO ALTERAR!
 // Requisito 1
 function quantity() {
   // #Dica o metodo length é seu aliado neste caso.
-  requisito1 = //Seu código aqui
-
-
+  requisito1 = historicoDeResultado.length;
+  //Seu código aqui
     req1.innerHTML = `Quantidade de posições ${requisito1}`; //NÃO ALTERAR!
 };
 
@@ -32,10 +31,12 @@ function quantity() {
 // Requisito 2
 function firstLastPosition() {
   //Seu código aqui descomente para usar a estrutura declarada.
-  /*   for () {
+    for (let i = 0; i < historicoDeResultado.length; i++ ) {
       requisito2 = [];
-      requisito2 = //Seu código aqui, manipule a variável sem alterar o nome dela.
-    } */
+      //requisito2 = [historicoDeResultado[0], historicoDeResultado.length - 1] 
+      requisito2 = [historicoDeResultado[0], historicoDeResultado[historicoDeResultado.length - 1]]
+       //Seu código aqui, manipule a variável sem alterar o nome dela.
+    }
 
   req2.innerHTML = `Primeiro e ultimo item [ ${requisito2} ]`; //NÃO ALTERAR!
 }
@@ -46,7 +47,7 @@ function pushMethod() {
   const date = new Date(); //NÃO ALTERAR! Está linha pega a data completa de hoje. 
   const anoAtual = date.getFullYear();//NÃO ALTERAR! Formata a linha acima e pega só o ANO 2022 . 
   
-  requisito3 //Seu código aqui, manipule a variável sem alterar o nome dela.
+  requisito3.push(anoAtual)//Seu código aqui, manipule a variável sem alterar o nome dela.
 
 
   req3.innerHTML = `push [ ${requisito3} ]`; //NÃO ALTERAR!
@@ -55,8 +56,8 @@ function pushMethod() {
 
 // Requisito 4
 function sortMethod() {
-  let sortCrescente = req4crescente; //Seu código aqui, manipule a variável sem alterar o nome dela.
-  let sortDecrescente = req4decrscente; //Seu código aqui, manipule a variável sem alterar o nome dela.
+  let sortCrescente = req4crescente.sort((a,b) => a - b); //Seu código aqui, manipule a variável sem alterar o nome dela.
+  let sortDecrescente = req4decrscente.sort(((a,b) => b - a)); //Seu código aqui, manipule a variável sem alterar o nome dela.
 
 
   req4Crescente.innerHTML = `Sort Crescente[ ${sortCrescente} ]`;//NÃO ALTERAR!
